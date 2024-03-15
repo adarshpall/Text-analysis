@@ -15,26 +15,36 @@ function App() {
     setalert(null);
   }, 1500);
   }
+  // const removebodyclass=()=>{
+  //   document.body.classList.remove('bg-light')
+  //   document.body.classList.remove('bg-dark')
+  //   document.body.classList.remove('bg-warning')
+  //   document.body.classList.remove('bg-success')
+  //   document.body.classList.remove('bg-danger')
+  //   document.body.classList.remove('bg-primary')
+  // }
  const [mode,setmode]=useState(`light`);
  const change = ()=>{
+  // removebodyclass();
+  // document.body.classList.add('bg-'+cls)
   if(mode==='light'){
     setmode('dark');
-    document.body.style.backgroundColor='grey';
-    showalert("dark mode is enabled","success");
+    document.body.style.backgroundColor='#0d0c21';
+    showalert("change of theme  is being executed","success");
   }
   else{
     setmode('light');
     document.body.style.backgroundColor='white';
-    showalert("light mode is enabled","success");
+    showalert("change of theme  is being executed","success");
   }
  }
  const [alert,setalert]= useState(null)
   return (
     <>
 
-   <Navbar title ="adarsh" about = "hello" mode={mode} change ={change}/>
+   <Navbar title ="Contact  us" about = "hello" mode={mode} change ={change}/>
    <Alerts  alert={alert}/>
-   <div className='container'><Textform heading="enter text" mode={mode}  /></div>
+   <div className='container'><Textform heading="Enter your text to analyze" mode={mode}  showalert={showalert}/></div>
      
     </>
   );
