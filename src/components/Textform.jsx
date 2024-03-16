@@ -30,6 +30,7 @@ settext(newtext);
   const [text,settext]=useState('');
   return ( 
  <>
+ 
     <div className="container" style={{color: props.mode==='light'?'grey':'white' }}>
     <h1>{props.heading}</h1>
       <div className="mb-3">

@@ -30,12 +30,13 @@ function App() {
   
   if(mode==='light'){
     setmode('dark');
-    // document.body.style.backgroundColor='';
+    document.body.style.removeProperty("background-color");
     document.body.style.backgroundColor='#0d0c21';
     showalert("change of theme  is being executed","success");
   }
   else{
     setmode('light');
+    document.body.style.removeProperty("background-color");
     document.body.style.backgroundColor='white';
     showalert("change of theme  is being executed","success");
   }
@@ -46,8 +47,9 @@ function App() {
 
    <Navbar title ="Contact  us" about = "hello" mode={mode} change ={change}/>
    <Alerts  alert={alert}/>
+   
   {/* { document.body.style.backgroundColor="#0d0c21"} */}
-   <div className='container'><Textform heading="Enter your text to analyze" mode={mode}  showalert={showalert}/></div>
+   <div className='container'><Textform heading="Enter your text to analyze" mode={mode}    showalert={showalert}/></div>
      
     </>
   );
