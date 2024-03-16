@@ -27,8 +27,10 @@ function App() {
  const change = ()=>{
   // removebodyclass();
   // document.body.classList.add('bg-'+cls)
+  
   if(mode==='light'){
     setmode('dark');
+    // document.body.style.backgroundColor='';
     document.body.style.backgroundColor='#0d0c21';
     showalert("change of theme  is being executed","success");
   }
@@ -44,6 +46,7 @@ function App() {
 
    <Navbar title ="Contact  us" about = "hello" mode={mode} change ={change}/>
    <Alerts  alert={alert}/>
+  {/* { document.body.style.backgroundColor="#0d0c21"} */}
    <div className='container'><Textform heading="Enter your text to analyze" mode={mode}  showalert={showalert}/></div>
      
     </>

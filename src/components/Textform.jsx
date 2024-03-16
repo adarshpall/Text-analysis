@@ -36,11 +36,11 @@ settext(newtext);
   <textarea className="form-control" style={{backgroundColor: props.mode==='dark'?'grey':'white',color: props.mode==='light'?'grey':'white'}} value={text} onChange={handleon}  id="my-box" rows= "8"></textarea>
 
 </div>
-<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2`}onClick={handleup}> Convert to up </button>
-<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2`}onClick={handlelo}> Convert to low </button>
-<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2`} onClick={extraSpace}> Remove extra space</button>
-<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2` }onClick={copy}> Copy text</button>
-<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2` }onClick={clea}> Clear text</button>
+<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2 my-2`}onClick={handleup}> Convert to up </button>
+<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2 my-2`}onClick={handlelo}> Convert to low </button>
+<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2 my-2`} onClick={extraSpace}> Remove extra space</button>
+<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2 my-2` }onClick={copy}> Copy text</button>
+<button className={`btn btn-${props.mode==='light'?'secondary':'info'} mx-2 my-2` }onClick={clea}> Clear text</button>
     </div>
     <div className="container" style={{color: props.mode==='light'?'grey':'white'}}>
       <h1>summarry of your text</h1>
